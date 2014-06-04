@@ -1,0 +1,9 @@
+{
+    "name": "ddp",
+    "version": "0.0.1",
+    "description": "Standalone client side implementation of Meteor's DDP Protocol (with SRP for authentication)",
+    "main": "ddp.js",
+    "dependencies": {
+        "underscore": ""
+    }
+}
