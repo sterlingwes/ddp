@@ -277,6 +277,9 @@ DDPClient.prototype._login = function(loginParams, password, callback) {
   initialRequest.user = loginParams;
 
   self.call('beginPasswordExchange', [initialRequest], function(err, result) {
+	
+	if(err)	return callback(err);
+	
     var response = srp.respondToChallenge(result);
   
     self.call('login', [{ srp : response }], function (err, result) {
